@@ -1,0 +1,14 @@
+# Community Language Adapters
+
+Each language gets its own directory under `adapters/`.
+
+Reference: `lh_standard_adapter/` (Python, canonical)
+
+Bounties: See Issues #1-#5 for active language adapter bounties.
+
+Current bounties:
+- #1 JavaScript/TypeScript (npm)
+- #2 Go (go modules)  
+- #3 Rust (crates.io)
+- #4 Java/Kotlin (Maven Central)
+- #5 Ruby (RubyGems)
