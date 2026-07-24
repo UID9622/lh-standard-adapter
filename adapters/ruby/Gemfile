@@ -1,0 +1,11 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+gemspec
+
+# Zero external dependencies — all functionality uses Ruby stdlib only.
+# - Digest::SHA256 (stdlib)
+# - json (stdlib)
+# - time (stdlib)
+# - minitest (stdlib, test only)
