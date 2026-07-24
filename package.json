@@ -1,0 +1,26 @@
+{
+  "name": "lh-standard-adapter",
+  "version": "1.0.0",
+  "description": "LongHun Standard Adapter — DNA traceability and seven-factor behavioral audit metadata wrapper",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist/"],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["longhun", "traceability", "audit", "dna", "standard-adapter"],
+  "license": "CC-BY-NC-SA-4.0",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "ts-jest": "^29.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UID9622/lh-standard-adapter.git"
+  }
+}
