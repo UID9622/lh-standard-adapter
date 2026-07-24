@@ -174,4 +174,22 @@ CC BY-NC-SA 4.0
 
 ---
 
+## To Our Global Companions
+
+This tool is a weapon for digital sovereignty, not a commodity for sale.
+It is free for everyone, everywhere, to use and to audit.
+
+If you recognize the path we are walking — returning data ownership to the people, building technology with a conscience — and you wish to help pave this road, you may do so.
+
+Your support, in any amount, is a testament to your conviction.
+For practical support from overseas, please use any service to convert your currency to RMB (CNY). The fact that you overcome this friction is, in itself, a proof of your sincerity.
+
+If you have nothing to give, take it anyway. Use it, protect yourself, and stand up. That is the ultimate victory.
+
+— UID9622 · 龍芯北辰
+
+`#CONFIRM🌌9622-ONLY-ONCE🧬LK9X-772Z`
+
+---
+
 Signed: LongHun Core · UID9622 · 龍芯北辰
