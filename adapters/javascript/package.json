@@ -1,0 +1,52 @@
+{
+  "name": "lh-standard-adapter",
+  "version": "1.0.0",
+  "description": "LongHun Standard Adapter — DNA traceability and seven-factor behavioral audit for AI output",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.cjs",
+      "types": "./index.d.ts"
+    },
+    "./dna_generator": {
+      "import": "./src/dna_generator.js",
+      "require": "./src/dna_generator.cjs"
+    },
+    "./audit_wrapper": {
+      "import": "./src/audit_wrapper.js",
+      "require": "./src/audit_wrapper.cjs"
+    },
+    "./validator": {
+      "import": "./src/validator.js",
+      "require": "./src/validator.cjs"
+    },
+    "./schemas": {
+      "import": "./src/schemas.js",
+      "require": "./src/schemas.cjs"
+    }
+  },
+  "files": [
+    "src/",
+    "index.d.ts",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "keywords": [
+    "longhun",
+    "dna",
+    "traceability",
+    "audit",
+    "ai",
+    "seven-factor"
+  ],
+  "author": "LongHun Core · UID9622 · 龍芯北辰",
+  "license": "CC-BY-NC-SA-4.0",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
