@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.uid9622.longhun</groupId>
+    <artifactId>lh-standard-adapter</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>LongHun Standard Adapter</name>
+    <description>Wrap any JSON payload with DNA traceability and seven-factor behavioral audit metadata.</description>
+    <url>https://github.com/UID9622/lh-standard-adapter</url>
+
+    <licenses>
+        <license>
+            <name>CC BY-NC-SA 4.0</name>
+            <url>https://creativecommons.org/licenses/by-nc-sa/4.0/</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>uid9622</id>
+            <name>LongHun Core</name>
+            <email>core@uid9622.cn</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/UID9622/lh-standard-adapter.git</connection>
+        <developerConnection>scm:git:ssh://github.com:UID9622/lh-standard-adapter.git</developerConnection>
+        <url>https://github.com/UID9622/lh-standard-adapter</url>
+    </scm>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jackson.version>2.15.2</jackson.version>
+        <junit.version>5.10.0</junit.version>
+    </properties>
+
+    <dependencies>
+        <!-- Jackson for JSON processing -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- JUnit 5 for testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.1.2</version>
+            </plugin>
+            
+        </plugins>
+    </build>
+</project>
