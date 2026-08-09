@@ -1,5 +1,11 @@
 # lh_standard_adapter
 
+[![License](https://img.shields.io/badge/license-MulanPSL%20v2%20%7C%20CC%20BY--NC--SA%204.0-green)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/UID9622/lh-standard-adapter?style=social)](https://github.com/UID9622/lh-standard-adapter/stargazers)
+[![Issues](https://img.shields.io/github/issues/UID9622/lh-standard-adapter)](https://github.com/UID9622/lh-standard-adapter/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/UID9622/lh-standard-adapter)](https://github.com/UID9622/lh-standard-adapter/commits)
+
+
 > DNA: `#LongHun⚡️BingWu·GuiWei·JiaZi·ZiShi·䷾JiJi-ADAPTER-v1.0`
 > Author: LongHun Core · UID9622
 > License: CC BY-NC-SA 4.0
