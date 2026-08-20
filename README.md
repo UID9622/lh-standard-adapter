@@ -1,5 +1,17 @@
 # lh_standard_adapter
 
+## 在龍魂体系中的位置
+
+| 仓库 | 层 | 职责 | 上游 | 下游 |
+|---|---|---|---|---|
+| longhun-system | 治理层 | 三层监督 + 三色审计 + DNA 追溯 | — | 全部 |
+| CNSH / CNSH-Editor | 语言层 | 中文原生脚本 + 字形/渲染 | longhun-system 规则 | 应用层 |
+| lh-standard-adapter | 适配层 | 把龍魂规则接到外部标准/框架 | longhun-system | 第三方生态 |
+
+公开首页 / Home: https://uid9622.notion.site
+
+---
+
 [![License](https://img.shields.io/badge/license-MulanPSL%20v2%20%7C%20CC%20BY--NC--SA%204.0-green)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/UID9622/lh-standard-adapter?style=social)](https://github.com/UID9622/lh-standard-adapter/stargazers)
 [![Issues](https://img.shields.io/github/issues/UID9622/lh-standard-adapter)](https://github.com/UID9622/lh-standard-adapter/issues)
