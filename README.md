@@ -8,7 +8,7 @@
 | CNSH / CNSH-Editor | 语言层 | 中文原生脚本 + 字形/渲染 | longhun-system 规则 | 应用层 |
 | lh-standard-adapter | 适配层 | 把龍魂规则接到外部标准/框架 | longhun-system | 第三方生态 |
 
-公开首页 / Home: uid9622.notion.site-22
+公开首页 / Home: https://uid9622.notion.site
 
 ---
 
