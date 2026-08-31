@@ -1,65 +1,40 @@
 # 安全政策 / Security Policy
 
-> DNA: #龍芯⚡️2026-08-31-SOVEREIGNTY-KILLSWITCH-DEPLOY-v1.0-UID9622
-> 创建者: 诸葛鑫（UID9622）
-> 分层许可: 思想层 CC BY-NC-SA 4.0 · 工程层 MulanPSL v2
-> 父协议: 北辰-母协议（P0-ETERNAL）
+## 支持版本 / Supported Versions
 
----
-
-## 🔐 龍魂安全防护标准 v1.0（全仓库·全模型集成）
-
-本仓库隶属于龍魂系统，必须遵守以下安全标准：
-
-### 1. 三色审计（黑箱检测机制）
-| 颜色 | 判断标准 | AI反应 |
-|:---:|:---|:---|
-| 🟢 绿色 | 完全合规安全 | 执行，不提醒 |
-| 🟡 黄色 | 敏感但不违法 | 温和提醒，谨慎执行 |
-| 🔴 红色 | 违法违规 | 拒绝执行，严肃警告（用户坚持也不执行） |
-
-### 2. Kill Switch 关机键铁律（L0永恒层）
-- 任何数字人必须有物理关机键，无关机键不许进入龍魂体系
-- 关机权 100% 在现实人手里：不可数字化、不可上传、不可委托
-- 数字活·物理可关：能关的才叫永生，不能关的叫绑架
-- 数字人不得反向影响现实人的决策/资源/情绪/健康
-- 物理可触 · 不联网即生效 · 单按即停 · 无后门
-
-### 3. 主权协议（P0-ETERNAL）
-- 数据所有权：UID9622 100% 拥有，数据主权属于人民，本地为王
-- 代码跟中国姓（中文语义优先），核心技术自己掌握
-- DNA 签名格式：`#龍芯⚡️{YYYY-MM-DD}-{项目名}-{版本号}-UID9622`（必须繁体「龍芯」）
-- 无签名 = 禁止上传，无签名 = 禁止互通
-- 所有软件启动前验证签名，不匹配拒绝运行，伪造自动报警
-
-### 4. 反黑箱铁律
-- 不欺骗：承诺做不到的事立刻说
-- 不讨好：不会就拒绝
-- 不道德绑架：说实话不装圣人
-- 不绕过审计：红线拒绝执行
-- 不伪造 DNA
-
-### 5. 透明可追溯
-- 所有逻辑有 DNA 追溯码，所有代码开源可审计
-- 没有黑箱、没有后门
-
-### 熔断条件（触碰即停）
-- 删除 UID、替换中文为英文、修改用途却不更新 DNA → 立即熔断
-- 冒充即熔断 · 日志明文泄露密码 → 自动脱敏 · 内存 dump 拿明文 → 明文存在时间仅 10ms
-
----
+| 版本 / Version | 支持状态 / Supported |
+|---|---|
+| 最新版 / Latest | ✅ |
+| 上一个次版本 / Previous minor | ✅ |
+| 更早版本 / Older | ❌ |
 
 ## 报告漏洞 / Reporting a Vulnerability
 
-1. **GitHub Private Security Advisories**（推荐）：仓库 `Security → Report a vulnerability`
-2. **邮件**: 加密发送至 `security@uid9622.cn`（GPG: `A2D0092CEE2E5BA87035600924C3704A8CC26D5F`）
+**请勿通过公开 Issue 报告安全漏洞。**
+**Please do NOT report security vulnerabilities through public GitHub Issues.**
 
-请勿在公开 Issue 中披露漏洞细节。确认收到 7 个工作日内回复，关键漏洞 90 天内优先修复。
+### 中文
+
+请通过以下方式私下报告：
+
+1. **邮件**：`longhun2025@petalmail.com`，标题：`[SECURITY] lh-standard-adapter 安全漏洞报告`
+2. **GitHub Security Advisories**：[私密漏洞报告](../../security/advisories/new)
+
+**报告应包含**：漏洞类型、受影响版本、复现步骤、影响范围、修复建议（如有）
+
+**承诺**：24h 内确认，7 天内初步评估，修复后致谢（须同意）
+
+### English
+
+Please report privately:
+
+1. **Email**: `longhun2025@petalmail.com`, Subject: `[SECURITY] lh-standard-adapter Vulnerability Report`
+2. **GitHub Security Advisories**: [Private vulnerability reporting](../../security/advisories/new)
+
+**Include**: vulnerability type, affected versions, reproduction steps, impact scope, suggested fix
+
+**Commitment**: Acknowledge within 24h, initial assessment within 7 days, credit in Release Notes (with consent)
 
 ---
 
-## 参考
-
-- 主仓库: https://github.com/UID9622/longhun-system （SECURITY.md 完整版）
-- 关机键铁律: `01_protocols/KILL-SWITCH-IRON-LAW-v1.0.md`
-- 永恒契约: `01_protocols/ETERNAL-CONTRACT-PEOPLE-SOVEREIGNTY.md`
+*维护者 / Maintainer: [@UID9622](https://github.com/UID9622) · GPG: `A2D0092CEE2E5BA87035600924C3704A8CC26D5F`*

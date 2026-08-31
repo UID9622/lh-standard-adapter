@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 社区讨论 / Community Discussion
+    url: https://github.com/UID9622/longhun-system/discussions
+    about: 欢迎提问和讨论 / Ask questions and discuss here
+  - name: 📚 项目主页 / Project Hub
+    url: https://github.com/UID9622
+    about: 查看所有 UID9622 项目 / Browse all UID9622 projects
