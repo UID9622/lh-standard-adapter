@@ -1,0 +1,22 @@
+{
+  "name": "lh-standard-adapter",
+  "version": "1.0.0",
+  "description": "JavaScript/TypeScript adapter for LongHun DNA traceability and audit wrapping",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "keywords": [
+    "longhun",
+    "dna",
+    "audit",
+    "traceability",
+    "adapter"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UID9622/lh-standard-adapter.git"
+  }
+}
