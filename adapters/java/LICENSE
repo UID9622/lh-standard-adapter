@@ -1,0 +1,437 @@
+1|Attribution-NonCommercial-ShareAlike 4.0 International
+2|
+3|=======================================================================
+4|
+5|Creative Commons Corporation ("Creative Commons") is not a law firm and
+6|does not provide legal services or legal advice. Distribution of
+7|Creative Commons public licenses does not create a lawyer-client or
+8|other relationship. Creative Commons makes its licenses and related
+9|information available on an "as-is" basis. Creative Commons gives no
+10|warranties regarding its licenses, any material licensed under their
+11|terms and conditions, or any related information. Creative Commons
+12|disclaims all liability for damages resulting from their use to the
+13|fullest extent possible.
+14|
+15|Using Creative Commons Public Licenses
+16|
+17|Creative Commons public licenses provide a standard set of terms and
+18|conditions that creators and other rights holders may use to share
+19|original works of authorship and other material subject to copyright
+20|and certain other rights specified in the public license below. The
+21|following considerations are for informational purposes only, are not
+22|exhaustive, and do not form part of our licenses.
+23|
+24|     Considerations for licensors: Our public licenses are
+25|     intended for use by those authorized to give the public
+26|     permission to use material in ways otherwise restricted by
+27|     copyright and certain other rights. Our licenses are
+28|     irrevocable. Licensors should read and understand the terms
+29|     and conditions of the license they choose before applying it.
+30|     Licensors should also secure all rights necessary before
+31|     applying our licenses so that the public can reuse the
+32|     material as expected. Licensors should clearly mark any
+33|     material not subject to the license. This includes other CC-
+34|     licensed material, or material used under an exception or
+35|     limitation to copyright. More considerations for licensors:
+36|    wiki.creativecommons.org/Considerations_for_licensors
+37|
+38|     Considerations for the public: By using one of our public
+39|     licenses, a licensor grants the public permission to use the
+40|     licensed material under specified terms and conditions. If
+41|     the licensor's permission is not necessary for any reason--for
+42|     example, because of any applicable exception or limitation to
+43|     copyright--then that use is not regulated by the license. Our
+44|     licenses grant only permissions under copyright and certain
+45|     other rights that a licensor has authority to grant. Use of
+46|     the licensed material may still be restricted for other
+47|     reasons, including because others have copyright or other
+48|     rights in the material. A licensor may make special requests,
+49|     such as asking that all changes be marked or described.
+50|     Although not required by our licenses, you are encouraged to
+51|     respect those requests where reasonable. More considerations
+52|     for the public:
+53|    wiki.creativecommons.org/Considerations_for_licensees
+54|
+55|=======================================================================
+56|
+57|Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+58|Public License
+59|
+60|By exercising the Licensed Rights (defined below), You accept and agree
+61|to be bound by the terms and conditions of this Creative Commons
+62|Attribution-NonCommercial-ShareAlike 4.0 International Public License
+63|("Public License"). To the extent this Public License may be
+64|interpreted as a contract, You are granted the Licensed Rights in
+65|consideration of Your acceptance of these terms and conditions, and the
+66|Licensor grants You such rights in consideration of benefits the
+67|Licensor receives from making the Licensed Material available under
+68|these terms and conditions.
+69|
+70|
+71|Section 1 -- Definitions.
+72|
+73|  a. Adapted Material means material subject to Copyright and Similar
+74|     Rights that is derived from or based upon the Licensed Material
+75|     and in which the Licensed Material is translated, altered,
+76|     arranged, transformed, or otherwise modified in a manner requiring
+77|     permission under the Copyright and Similar Rights held by the
+78|     Licensor. For purposes of this Public License, where the Licensed
+79|     Material is a musical work, performance, or sound recording,
+80|     Adapted Material is always produced where the Licensed Material is
+81|     synched in timed relation with a moving image.
+82|
+83|  b. Adapter's License means the license You apply to Your Copyright
+84|     and Similar Rights in Your contributions to Adapted Material in
+85|     accordance with the terms and conditions of this Public License.
+86|
+87|  c. BY-NC-SA Compatible License means a license listed at
+88|     creativecommons.org/compatiblelicenses, approved by Creative
+89|     Commons as essentially the equivalent of this Public License.
+90|
+91|  d. Copyright and Similar Rights means copyright and/or similar rights
+92|     closely related to copyright including, without limitation,
+93|     performance, broadcast, sound recording, and Sui Generis Database
+94|     Rights, without regard to how the rights are labeled or
+95|     categorized. For purposes of this Public License, the rights
+96|     specified in Section 2(b)(1)-(2) are not Copyright and Similar
+97|     Rights.
+98|
+99|  e. Effective Technological Measures means those measures that, in the
+100|     absence of proper authority, may not be circumvented under laws
+101|     fulfilling obligations under Article 11 of the WIPO Copyright
+102|     Treaty adopted on December 20, 1996, and/or similar international
+103|     agreements.
+104|
+105|  f. Exceptions and Limitations means fair use, fair dealing, and/or
+106|     any other exception or limitation to Copyright and Similar Rights
+107|     that applies to Your use of the Licensed Material.
+108|
+109|  g. License Elements means the license attributes listed in the name
+110|     of a Creative Commons Public License. The License Elements of this
+111|     Public License are Attribution, NonCommercial, and ShareAlike.
+112|
+113|  h. Licensed Material means the artistic or literary work, database,
+114|     or other material to which the Licensor applied this Public
+115|     License.
+116|
+117|  i. Licensed Rights means the rights granted to You subject to the
+118|     terms and conditions of this Public License, which are limited to
+119|     all Copyright and Similar Rights that apply to Your use of the
+120|     Licensed Material and that the Licensor has authority to license.
+121|
+122|  j. Licensor means the individual(s) or entity(ies) granting rights
+123|     under this Public License.
+124|
+125|  k. NonCommercial means not primarily intended for or directed towards
+126|     commercial advantage or monetary compensation. For purposes of
+127|     this Public License, the exchange of the Licensed Material for
+128|     other material subject to Copyright and Similar Rights by digital
+129|     file-sharing or similar means is NonCommercial provided there is
+130|     no payment of monetary compensation in connection with the
+131|     exchange.
+132|
+133|  l. Share means to provide material to the public by any means or
+134|     process that requires permission under the Licensed Rights, such
+135|     as reproduction, public display, public performance, distribution,
+136|     dissemination, communication, or importation, and to make material
+137|     available to the public including in ways that members of the
+138|     public may access the material from a place and at a time
+139|     individually chosen by them.
+140|
+141|  m. Sui Generis Database Rights means rights other than copyright
+142|     resulting from Directive 96/9/EC of the European Parliament and of
+143|     the Council of 11 March 1996 on the legal protection of databases,
+144|     as amended and/or succeeded, as well as other essentially
+145|     equivalent rights anywhere in the world.
+146|
+147|  n. You means the individual or entity exercising the Licensed Rights
+148|     under this Public License. Your has a corresponding meaning.
+149|
+150|
+151|Section 2 -- Scope.
+152|
+153|  a. License grant.
+154|
+155|       1. Subject to the terms and conditions of this Public License,
+156|          the Licensor hereby grants You a worldwide, royalty-free,
+157|          non-sublicensable, non-exclusive, irrevocable license to
+158|          exercise the Licensed Rights in the Licensed Material to:
+159|
+160|            a. reproduce and Share the Licensed Material, in whole or
+161|               in part, for NonCommercial purposes only; and
+162|
+163|            b. produce, reproduce, and Share Adapted Material for
+164|               NonCommercial purposes only.
+165|
+166|       2. Exceptions and Limitations. For the avoidance of doubt, where
+167|          Exceptions and Limitations apply to Your use, this Public
+168|          License does not apply, and You do not need to comply with
+169|          its terms and conditions.
+170|
+171|       3. Term. The term of this Public License is specified in Section
+172|          6(a).
+173|
+174|       4. Media and formats; technical modifications allowed. The
+175|          Licensor authorizes You to exercise the Licensed Rights in
+176|          all media and formats whether now known or hereafter created,
+177|          and to make technical modifications necessary to do so. The
+178|          Licensor waives and/or agrees not to assert any right or
+179|          authority to forbid You from making technical modifications
+180|          necessary to exercise the Licensed Rights, including
+181|          technical modifications necessary to circumvent Effective
+182|          Technological Measures. For purposes of this Public License,
+183|          simply making modifications authorized by this Section 2(a)
+184|          (4) never produces Adapted Material.
+185|
+186|       5. Downstream recipients.
+187|
+188|            a. Offer from the Licensor -- Licensed Material. Every
+189|               recipient of the Licensed Material automatically
+190|               receives an offer from the Licensor to exercise the
+191|               Licensed Rights under the terms and conditions of this
+192|               Public License.
+193|
+194|            b. Additional offer from the Licensor -- Adapted Material.
+195|               Every recipient of Adapted Material from You
+196|               automatically receives an offer from the Licensor to
+197|               exercise the Licensed Rights in the Adapted Material
+198|               under the conditions of the Adapter's License You apply.
+199|
+200|            c. No downstream restrictions. You may not offer or impose
+201|               any additional or different terms or conditions on, or
+202|               apply any Effective Technological Measures to, the
+203|               Licensed Material if doing so restricts exercise of the
+204|               Licensed Rights by any recipient.
+205|
+206|       6. No endorsement. Nothing in this Public License constitutes or
+207|          may be construed as permission to assert or imply that You
+208|          are, or that Your use of the Licensed Material is, connected
+209|          with, or sponsored, or endorsed by, or granted official status
+210|          by, the Licensor or others designated to receive attribution
+211|          as provided in Section 3(a)(1)(A)(i).
+212|
+213|  b. Other rights.
+214|
+215|       1. Moral rights, such as the right of integrity, are not
+216|          licensed under this Public License, nor are publicity,
+217|          privacy, and/or other similar personality rights; however, to
+218|          the extent possible, the Licensor waives and/or agrees not to
+219|          assert any such rights held by the Licensor to the limited
+220|          extent necessary to allow You to exercise the Licensed
+221|          Rights, but not otherwise.
+222|
+223|       2. Patent and trademark rights are not licensed under this
+224|          Public License.
+225|
+226|       3. To the extent possible, the Licensor waives any right to
+227|          collect royalties from You for the exercise of the Licensed
+228|          Rights, whether directly or through a collecting society under
+229|          any voluntary or waivable statutory or compulsory licensing
+230|          scheme. In all other cases the Licensor expressly reserves
+231|          any right to collect such royalties, including when the
+232|          Licensed Material is used other than for NonCommercial
+233|          purposes.
+234|
+235|
+236|Section 3 -- License Conditions.
+237|
+238|Your exercise of the Licensed Rights is expressly made subject to the
+239|following conditions.
+240|
+241|  a. Attribution.
+242|
+243|       1. If You Share the Licensed Material (including in modified
+244|          form), You must:
+245|
+246|            a. retain the following if it is supplied by the Licensor
+247|               with the Licensed Material:
+248|
+249|                 i. identification of the creator(s) of the Licensed
+250|                    Material and any others designated to receive
+251|                    attribution, in any reasonable manner requested by
+252|                    the Licensor (including by pseudonym if designated);
+253|
+254|                ii. a copyright notice;
+255|
+256|               iii. a notice that refers to this Public License;
+257|
+258|                iv. a notice that refers to the disclaimer of
+259|                    warranties;
+260|
+261|                 v. a URI or hyperlink to the Licensed Material to the
+262|                    extent reasonably practicable;
+263|
+264|            b. indicate if You modified the Licensed Material and
+265|               retain an indication of any previous modifications; and
+266|
+267|            c. indicate the Licensed Material is licensed under this
+268|               Public License, and include the text of, or the URI or
+269|               hyperlink to, this Public License.
+270|
+271|       2. You may satisfy the conditions in Section 3(a)(1) in any
+272|          reasonable manner based on the medium, means, and context in
+273|          which You Share the Licensed Material. For example, it may be
+274|          reasonable to satisfy the conditions by providing a URI or
+275|          hyperlink to a resource that includes the required
+276|          information.
+277|
+278|       3. If requested by the Licensor, You must remove any of the
+279|          information required by Section 3(a)(1)(A) to the extent
+280|          reasonably practicable.
+281|
+282|  b. ShareAlike.
+283|
+284|     In addition to the conditions in Section 3(a), if You Share
+285|     Adapted Material You produce, the following conditions also apply.
+286|
+287|       1. The Adapter's License You apply must be a Creative Commons
+288|          license with the same License Elements, this version or
+289|          later, or a BY-NC-SA Compatible License.
+290|
+291|       2. You must include the text of, or the URI or hyperlink to, the
+292|          Adapter's License You apply. You may satisfy this condition
+293|          in any reasonable manner based on the medium, means, and
+294|          context in which You Share Adapted Material.
+295|
+296|       3. You may not offer or impose any additional or different terms
+297|          or conditions on, or apply any Effective Technological
+298|          Measures to, Adapted Material that restrict exercise of the
+299|          rights granted under the Adapter's License You apply.
+300|
+301|
+302|Section 4 -- Sui Generis Database Rights.
+303|
+304|Where the Licensed Rights include Sui Generis Database Rights that
+305|apply to Your use of the Licensed Material:
+306|
+307|  a. for the avoidance of doubt, Section 2(a)(1) grants You the right
+308|     to extract, reuse, reproduce, and Share all or a substantial
+309|     portion of the contents of the database for NonCommercial purposes
+310|     only;
+311|
+312|  b. if You include all or a substantial portion of the database
+313|     contents in a database in which You have Sui Generis Database
+314|     Rights, then the database in which You have Sui Generis Database
+315|     Rights (but not its individual contents) is Adapted Material,
+316|
+317|     including for purposes of Section 3(b); and
+318|  c. You must comply with the conditions in Section 3(a) if You Share
+319|     all or a substantial portion of the contents of the database.
+320|
+321|For the avoidance of doubt, this Section 4 supplements and does not
+322|replace Your obligations under this Public License where the Licensed
+323|Rights include other Copyright and Similar Rights.
+324|
+325|
+326|Section 5 -- Disclaimer of Warranties and Limitation of Liability.
+327|
+328|  a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
+329|     EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
+330|     AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
+331|     ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
+332|     IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
+333|     WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+334|     PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
+335|     ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
+336|     KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT
+337|     FULLY ALLOWED IN PART OR IN WHOLE, THIS DISCLAIMER MAY NOT APPLY
+338|     TO YOU.
+339|
+340|  b. TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE
+341|     TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
+342|     NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
+343|     INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
+344|     COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
+345|     USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
+346|     ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
+347|     DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT FULLY ALLOWED IN
+348|     PART OR IN WHOLE, THIS LIMITATION MAY NOT APPLY TO YOU.
+349|
+350|  c. The disclaimer of warranties and limitation of liability provided
+351|     above shall be interpreted in a manner that, to the extent
+352|     possible, most closely approximates an absolute disclaimer and
+353|     waiver of all liability.
+354|
+355|
+356|Section 6 -- Term and Termination.
+357|
+358|  a. This Public License applies for the term of the Copyright and
+359|     Similar Rights licensed here. However, if You fail to comply with
+360|     this Public License, then Your rights under this Public License
+361|     terminate automatically.
+362|
+363|  b. Where Your right to use the Licensed Material has terminated under
+364|     Section 6(a), it reinstates:
+365|
+366|       1. automatically as of the date the violation is cured, provided
+367|          it is cured within 30 days of Your discovery of the
+368|          violation; or
+369|
+370|       2. upon express reinstatement by the Licensor.
+371|
+372|     For the avoidance of doubt, this Section 6(b) does not affect any
+373|     right the Licensor may have to seek remedies for Your violations
+374|     of this Public License.
+375|
+376|  c. For the avoidance of doubt, the Licensor may also offer the
+377|     Licensed Material under separate terms or conditions or stop
+378|     distributing the Licensed Material at any time; however, doing so
+379|     will not terminate this Public License.
+380|
+381|  d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
+382|     License.
+383|
+384|
+385|Section 7 -- Other Terms and Conditions.
+386|
+387|  a. The Licensor shall not be bound by any additional or different
+388|     terms or conditions communicated by You unless expressly agreed.
+389|
+390|  b. Any arrangements, understandings, or agreements regarding the
+391|     Licensed Material not stated herein are separate from and
+392|     independent of the terms and conditions of this Public License.
+393|
+394|
+395|Section 8 -- Interpretation.
+396|
+397|  a. For the avoidance of doubt, this Public License does not, and
+398|     shall not be interpreted to, reduce, limit, restrict, or impose
+399|     conditions on any use of the Licensed Material that could lawfully
+400|     be made without permission under this Public License.
+401|
+402|  b. To the extent possible, if any provision of this Public License is
+403|     held to be unenforceable, it shall be automatically reformed to the
+404|     minimum extent necessary to make it enforceable. If the provision
+405|     cannot be reformed, it shall be severed from this Public License
+406|     without affecting the enforceability of the remaining terms and
+407|     conditions.
+408|
+409|  c. No term or condition of this Public License will be waived and no
+410|     failure to comply consented to unless expressly agreed to by the
+411|     Licensor.
+412|
+413|  d. Nothing in this Public License constitutes or may be interpreted
+414|     as a limitation upon, or waiver of, any privileges and immunities
+415|     that apply to the Licensor or You, including from the legal
+416|     processes of any jurisdiction or authority.
+417|
+418|=======================================================================
+419|
+420|Creative Commons is not a party to its public
+421|licenses. Notwithstanding, Creative Commons may elect to apply one of
+422|its public licenses to material it publishes and in those instances
+423|will be considered the "Licensor." The text of the Creative Commons
+424|public licenses is dedicated to the public domain under the CC0 Public
+425|Domain Dedication. Except for the limited purpose of indicating that
+426|material is shared under a Creative Commons public license or as
+427|otherwise permitted by the Creative Commons policies published at
+428|creativecommons.org/policies, Creative Commons does not authorize the
+429|use of the trademark "Creative Commons" or any other trademark or logo
+430|of Creative Commons without its prior written consent including,
+431|without limitation, in connection with any unauthorized modifications
+432|to any of its public licenses or any other arrangements,
+433|understandings, or agreements concerning use of licensed material. For
+434|the avoidance of doubt, this paragraph does not form part of the
+435|public licenses.
+436|
+437|=======================================================================

@@ -1,0 +1,112 @@
+1|<?xml version="1.0" encoding="UTF-8"?>
+2|<project xmlns="http://maven.apache.org/POM/4.0.0"
+3|         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+4|         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+5|    <modelVersion>4.0.0</modelVersion>
+6|
+7|    <groupId>cn.uid9622.longhun</groupId>
+8|    <artifactId>lh-standard-adapter</artifactId>
+9|    <version>1.0.0</version>
+10|    <packaging>jar</packaging>
+11|
+12|    <name>LongHun Standard Adapter</name>
+13|    <description>Java/Kotlin implementation of the LongHun standard adapter – wrap JSON payloads with DNA traceability and seven-factor behavioral audit metadata.</description>
+14|    <url>https://github.com/UID9622/lh-standard-adapter</url>
+15|
+16|    <licenses>
+17|        <license>
+18|            <name>CC BY-NC-SA 4.0</name>
+19|            <url>https://creativecommons.org/licenses/by-nc-sa/4.0/</url>
+20|        </license>
+21|    </licenses>
+22|
+23|    <developers>
+24|        <developer>
+25|            <name>LongHun Core · UID9622 · 龍芯北辰</name>
+26|            <email>core@uid9622.cn</email>
+27|        </developer>
+28|    </developers>
+29|
+30|    <properties>
+31|        <maven.compiler.source>1.8</maven.compiler.source>
+32|        <maven.compiler.target>1.8</maven.compiler.target>
+33|        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+34|        <jackson.version>2.15.3</jackson.version>
+35|        <junit.version>5.10.0</junit.version>
+36|    </properties>
+37|
+38|    <dependencies>
+39|        <!-- Jackson for JSON processing -->
+40|        <dependency>
+41|            <groupId>com.fasterxml.jackson.core</groupId>
+42|            <artifactId>jackson-databind</artifactId>
+43|            <version>${jackson.version}</version>
+44|        </dependency>
+45|        <dependency>
+46|            <groupId>com.fasterxml.jackson.core</groupId>
+47|            <artifactId>jackson-core</artifactId>
+48|            <version>${jackson.version}</version>
+49|        </dependency>
+50|        <dependency>
+51|            <groupId>com.fasterxml.jackson.core</groupId>
+52|            <artifactId>jackson-annotations</artifactId>
+53|            <version>${jackson.version}</version>
+54|        </dependency>
+55|
+56|        <!-- JUnit 5 for testing -->
+57|        <dependency>
+58|            <groupId>org.junit.jupiter</groupId>
+59|            <artifactId>junit-jupiter</artifactId>
+60|            <version>${junit.version}</version>
+61|            <scope>test</scope>
+62|        </dependency>
+63|
+64|        <!-- Null-safety annotations for Kotlin-friendly API -->
+65|        <dependency>
+66|            <groupId>com.google.code.findbugs</groupId>
+67|            <artifactId>jsr305</artifactId>
+68|            <version>3.0.2</version>
+69|            <optional>true</optional>
+70|        </dependency>
+71|    </dependencies>
+72|
+73|    <build>
+74|        <plugins>
+75|            <plugin>
+76|                <groupId>org.apache.maven.plugins</groupId>
+77|                <artifactId>maven-compiler-plugin</artifactId>
+78|                <version>3.11.0</version>
+79|                <configuration>
+80|                    <source>1.8</source>
+81|                    <target>1.8</target>
+82|                    <encoding>UTF-8</encoding>
+83|                </configuration>
+84|            </plugin>
+85|            <plugin>
+86|                <groupId>org.apache.maven.plugins</groupId>
+87|                <artifactId>maven-surefire-plugin</artifactId>
+88|                <version>3.2.3</version>
+89|                <configuration>
+90|                    <includes>
+91|                        <include>**/*Test.java</include>
+92|                    </includes>
+93|                </configuration>
+94|            </plugin>
+95|            <plugin>
+96|                <groupId>org.apache.maven.plugins</groupId>
+97|                <artifactId>maven-javadoc-plugin</artifactId>
+98|                <version>3.6.0</version>
+99|                <configuration>
+100|                    <source>1.8</source>
+101|                    <encoding>UTF-8</encoding>
+102|                    <doclint>none</doclint>
+103|                </configuration>
+104|            </plugin>
+105|            <plugin>
+106|                <groupId>org.apache.maven.plugins</groupId>
+107|                <artifactId>maven-source-plugin</artifactId>
+108|                <version>3.3.0</version>
+109|            </plugin>
+110|        </plugins>
+111|    </build>
+112|</project>
