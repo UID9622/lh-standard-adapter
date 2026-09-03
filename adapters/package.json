@@ -1,0 +1,15 @@
+{
+  "name": "lh-standard-adapter",
+  "version": "1.0.0",
+  "description": "JavaScript/TypeScript Adapter for LongHun AI Traceability & Audit Protocol v1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/*.test.js || ts-node test"
+  },
+  "keywords": ["longhun", "traceability", "audit", "dna", "adapter", "typescript"],
+  "author": "LongHun Community",
+  "license": "CC-BY-NC-SA-4.0"
+}
