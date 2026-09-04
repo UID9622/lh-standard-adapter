@@ -1,0 +1,19 @@
+{
+  "name": "lh-standard-adapter",
+  "version": "1.0.0",
+  "description": "LongHun Standard Adapter — v∞ DNA traceability + seven-factor behavioral audit for JS/TS",
+  "main": "./src/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.cjs",
+      "types": "./index.d.ts"
+    }
+  },
+  "type": "module",
+  "files": ["src/", "index.d.ts", "README.md"],
+  "license": "CC-BY-NC-SA-4.0",
+  "engines": {"node": ">=16"},
+  "scripts": {"test": "node test/test.js"}
+}
