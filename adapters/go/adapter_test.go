@@ -1,6 +1,7 @@
 package lhstandardadapter
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -24,5 +25,5 @@ func TestValidateRoundTrip(t *testing.T) {
 // Python reference implementation.
 func TestSampleDNA(t *testing.T) {
 	a := New("9622", "HM-9622-001")
-	t.Log(a.GenerateDNA("code", "WRAP", "V1.0"))
+	fmt.Println(a.GenerateDNA("code", "WRAP", "V1.0"))
 }

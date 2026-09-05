@@ -30,8 +30,8 @@ jobs:
       - name: Build JS
         run: |
           cd adapters/javascript
-          npm install -g typescript
-          tsc
+          npm install --no-audit --no-fund
+          npx tsc
       - name: Consistency with Python reference (pillar prefix must match)
         run: |
           cd adapters/javascript
