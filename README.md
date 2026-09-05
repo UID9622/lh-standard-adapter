@@ -29,6 +29,20 @@ It does NOT contain core compiler logic, training scripts, or algorithm optimiza
 
 ---
 
+## Community Multi-Language Adapters (2026-09-05)
+
+Community-written adapters porting the DNA v∞ standard to other languages, verified against this Python reference in CI:
+
+| Adapter | Directory | Scope | Author |
+|:---|:---|:---|:---|
+| TypeScript / JavaScript | `adapters/javascript/` | DNA + seven-factor audit wrap + validate | [rushikeshgarad2024-dev](https://github.com/rushikeshgarad2024-dev) |
+| Go | `adapters/go/` | DNA + seven-factor audit wrap + validate | [rushikeshgarad2024-dev](https://github.com/rushikeshgarad2024-dev) |
+| Java | `adapters/java/` | DNA generate + validate | [rushikeshgarad2024-dev](https://github.com/rushikeshgarad2024-dev) |
+| Ruby | `adapters/ruby/` | DNA generate + validate | [rushikeshgarad2024-dev](https://github.com/rushikeshgarad2024-dev) |
+| Rust | `adapters/rust/` | DNA generate + validate | [rushikeshgarad2024-dev](https://github.com/rushikeshgarad2024-dev) |
+
+All adapters emit the **same four-pillar DNA prefix** (Asia/Shanghai, verified in CI against the Python reference); see each adapter's README. Full credit details: [CONTRIBUTORS.md](CONTRIBUTORS.md).
+
 ## Installation
 
 ```bash
@@ -191,6 +205,12 @@ CC BY-NC-SA 4.0
 - **SA**: ShareAlike (derivatives must use same license)
 
 ---
+
+## Community Gratitude — 社区致谢（2026-09-05）
+
+To [@rushikeshgarad2024-dev](https://github.com/rushikeshgarad2024-dev) — thank you for a week of unpaid, selfless work: five multi-language adapters, freely given to a standard that itself asks nothing in return. We received your code, reviewed it honestly, hardened it where it needed (real time-anchored Ganzhi pillars, full hexagram table, CI coverage) and published it with your name on every line that was yours. This is how a great nation behaves: with grace, with honesty, and with gratitude.
+
+> 「我的都是无偿贡献了，总不能别人问我要钱吧。」—— 龍魂的 bounty 从来是社区署名贡献。贡献者请放心：名字与功劳，一个字都不会少。— UID9622
 
 ## To Our Global Companions
 

@@ -11,9 +11,12 @@ import (
 )
 
 var (
-	TianGan  = []string{"Jia", "Yi", "Bing", "Ding", "Wu", "Ji", "Geng", "Xin", "Ren", "Gui"}
-	DiZhi    = []string{"Zi", "Chou", "Yin", "Mao", "Chen", "Si", "Wu", "Wei", "Shen", "You", "Xu", "Hai"}
-	ShiChen  = []string{"ZiShi", "ChouShi", "YinShi", "MaoShi", "ChenShi", "SiShi", "WuShi", "WeiShi", "ShenShi", "YouShi", "XuShi", "HaiShi"}
+	TianGan     = []string{"Jia", "Yi", "Bing", "Ding", "Wu", "Ji", "Geng", "Xin", "Ren", "Gui"}
+	DiZhi       = []string{"Zi", "Chou", "Yin", "Mao", "Chen", "Si", "Wu", "Wei", "Shen", "You", "Xu", "Hai"}
+	ShiChen     = []string{"ZiShi", "ChouShi", "YinShi", "MaoShi", "ChenShi", "SiShi", "WuShi", "WeiShi", "ShenShi", "YouShi", "XuShi", "HaiShi"}
+	CYCLE_YEAR  = 1984 // JiaZi reference year (aligned with reference implementation)
+	CYCLE_MONTH = []int{2, 4, 6, 8, 10, 0, 2, 4, 6, 8, 10, 0}
+
 	DnaRegex = regexp.MustCompile(`^#LongHun⚡️([A-Z][a-zA-Z]+)·([A-Z][a-zA-Z]+)·([A-Z][a-zA-Z]+)·([A-Z][a-zA-Z]+)·([䷀-䷿][A-Za-z]+)-(.+)-([a-f0-9]{8})$`)
 )
 
@@ -24,9 +27,14 @@ type Hexagram struct {
 	Domain string
 }
 
+// Full 14-hexagram reference table, matching the Python reference implementation.
 var Hexagrams = []Hexagram{
 	{Symbol: "䷀", EnName: "Qian", CnName: "乾", Domain: "governance"},
 	{Symbol: "䷁", EnName: "Kun", CnName: "坤", Domain: "archive"},
+	{Symbol: "䷂", EnName: "Zhun", CnName: "屯", Domain: "init"},
+	{Symbol: "䷃", EnName: "Meng", CnName: "蒙", Domain: "learn"},
+	{Symbol: "䷄", EnName: "Xu", CnName: "需", Domain: "async"},
+	{Symbol: "䷅", EnName: "Song", CnName: "讼", Domain: "legal"},
 	{Symbol: "䷜", EnName: "Kan", CnName: "坎", Domain: "engine"},
 	{Symbol: "䷝", EnName: "Li", CnName: "离", Domain: "audit"},
 	{Symbol: "䷲", EnName: "Zhen", CnName: "震", Domain: "security"},
@@ -35,6 +43,54 @@ var Hexagrams = []Hexagram{
 	{Symbol: "䷹", EnName: "Dui", CnName: "兑", Domain: "trust"},
 	{Symbol: "䷾", EnName: "JiJi", CnName: "既济", Domain: "complete"},
 	{Symbol: "䷿", EnName: "WeiJi", CnName: "未济", Domain: "progress"},
+}
+
+// taskDomain maps task types to hexagram domains (reference table).
+var taskDomain = map[string]string{
+	"default":  "governance",
+	"code":     "engine",
+	"deploy":   "deploy",
+	"audit":    "audit",
+	"security": "security",
+	"archive":  "archive",
+	"init":     "init",
+	"learn":    "learn",
+	"legal":    "legal",
+	"privacy":  "privacy",
+	"trust":    "trust",
+	"complete": "complete",
+	"progress": "progress",
+}
+
+func selectHexagram(taskType string) Hexagram {
+	domain := taskDomain[taskType]
+	if domain == "" {
+		domain = "governance"
+	}
+	for _, h := range Hexagrams {
+		if h.Domain == domain {
+			return h
+		}
+	}
+	return Hexagrams[0]
+}
+
+// computeStemBranch computes the four-pillar Ganzhi (stem-branch) under Asia/Shanghai
+// time, mirroring the Python reference algorithm (CYCLE_YEAR 1984, month-stem table,
+// Julian-day day pillar, shichen = hour/2).
+func computeStemBranch(now time.Time) (string, string, string, string) {
+	base := now.Year() - CYCLE_YEAR
+	yearStem := TianGan[((base%10)+10)%10] + DiZhi[((base%12)+12)%12]
+
+	monthStemIdx := (CYCLE_MONTH[((base%10)+10)%10] + (int(now.Month()) - 1)) % 10
+	monthBranchIdx := (int(now.Month()) + 1) % 12
+	monthPillar := TianGan[monthStemIdx] + DiZhi[monthBranchIdx]
+
+	julian := now.Year() - 1900 + (now.Year()-1900)/4 + now.YearDay()
+	dayPillar := TianGan[julian%10] + DiZhi[julian%12]
+
+	shichen := ShiChen[((now.Hour()+1)/2)%12]
+	return yearStem, monthPillar, dayPillar, shichen
 }
 
 type LongHunAdapter struct {
@@ -53,31 +109,25 @@ func New(uid, device string) *LongHunAdapter {
 }
 
 func (a *LongHunAdapter) GenerateDNA(taskType, action, version string) string {
+	if taskType == "" {
+		taskType = "default"
+	}
 	if action == "" {
 		action = "WRAP"
 	}
 	if version == "" {
 		version = "V1.0"
 	}
-	now := time.Now().UTC().Add(8 * time.Hour)
-	yearStem := TianGan[(now.Year()-1984+1200)%10] + DiZhi[(now.Year()-1984+1200)%12]
-	monthStem := TianGan[(now.Month()+1)%10] + DiZhi[(now.Month()+1)%12]
-	dayStem := TianGan[(now.YearDay()+1)%10] + DiZhi[(now.YearDay()+1)%12]
-	sc := ShiChen[(now.Hour()/2)%12]
+	now := time.Now().UTC().Add(8 * time.Hour) // Asia/Shanghai wall-clock time
+	yearStem, monthPillar, dayPillar, sc := computeStemBranch(now)
+	hex := selectHexagram(taskType)
 
-	hex := Hexagrams[0]
-	if taskType == "code" {
-		hex = Hexagrams[2]
-	} else if taskType == "audit" {
-		hex = Hexagrams[3]
-	}
-
-	body := fmt.Sprintf("ADAPTER-%s-%s-%s", strings.ToUpper(taskType), strings.ToUpper(action), version)
-	raw := fmt.Sprintf("%s%s%s%s%s%s%s%s%s", yearStem, monthStem, dayStem, sc, hex.Symbol, hex.EnName, body, a.Device, now.Format(time.RFC3339))
+	body := fmt.Sprintf("ADAPTER-%s-%s-%s", strings.ToUpper(taskType), strings.ToUpper(action), strings.ToUpper(version))
+	raw := fmt.Sprintf("%s%s%s%s%s%s%s%s%s", yearStem, monthPillar, dayPillar, sc, hex.Symbol, hex.EnName, body, a.Device, now.Format(time.RFC3339))
 	hash := sha256.Sum256([]byte(raw))
 	hash8 := hex.EncodeToString(hash[:])[:8]
 
-	return fmt.Sprintf("#LongHun⚡️%s·%s·%s·%s·%s%s-%s-%s", yearStem, monthStem, dayStem, sc, hex.Symbol, hex.EnName, body, hash8)
+	return fmt.Sprintf("#LongHun⚡️%s·%s·%s·%s·%s%s-%s-%s", yearStem, monthPillar, dayPillar, sc, hex.Symbol, hex.EnName, body, hash8)
 }
 
 func (a *LongHunAdapter) Wrap(payload interface{}, taskType, persona string) map[string]interface{} {

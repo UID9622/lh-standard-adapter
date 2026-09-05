@@ -80,7 +80,7 @@ class DNAGenerator:
         hexagram = self._select_hexagram(task_type)
         version = version or "V1.0"
 
-        body = f"ADAPTER-{task_type.upper()}-{action.upper()}-{version}"
+        body = f"ADAPTER-{task_type.upper()}-{action.upper()}-{version.upper()}"
 
         raw = (
             f"{stem['year']}{stem['month']}{stem['day']}{stem['shichen']}"
@@ -113,7 +113,7 @@ class DNAGenerator:
         day_branch_idx = (dt.year - 1900 + (dt.year - 1900) // 4 +
                           dt.timetuple().tm_yday) % 12
 
-        shichen_idx = dt.hour // 2
+        shichen_idx = ((dt.hour + 1) // 2) % 12
 
         return {
             "year": TIAN_GAN[year_stem_idx] + DI_ZHI[year_branch_idx],

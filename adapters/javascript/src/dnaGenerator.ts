@@ -61,7 +61,7 @@ export class DNAGenerator {
     const utc8Time = new Date(now.getTime() + (8 * 60 + now.getTimezoneOffset()) * 60000);
     const stem = this.computeStemBranch(utc8Time);
     const hex = this.selectHexagram(taskType);
-    const body = `ADAPTER-${taskType.toUpperCase()}-${action.toUpperCase()}-${version}`;
+    const body = `ADAPTER-${taskType.toUpperCase()}-${action.toUpperCase()}-${version.toUpperCase()}`;
 
     const raw = `${stem.year}${stem.month}${stem.day}${stem.shichen}${hex.symbol}${hex.en_name}${body}${this.device}${utc8Time.toISOString()}`;
     const hash8 = crypto.createHash("sha256").update(raw, "utf8").digest("hex").slice(0, 8);
@@ -83,7 +83,7 @@ export class DNAGenerator {
     const dayStemIdx = Math.abs((year - 1900 + Math.floor((year - 1900) / 4) + dayOfYear)) % 10;
     const dayBranchIdx = Math.abs((year - 1900 + Math.floor((year - 1900) / 4) + dayOfYear)) % 12;
 
-    const shichenIdx = Math.floor(dt.getHours() / 2) % 12;
+    const shichenIdx = Math.floor((dt.getHours() + 1) / 2) % 12;
 
     return {
       year: TIAN_GAN[yearStemIdx] + DI_ZHI[yearBranchIdx],
