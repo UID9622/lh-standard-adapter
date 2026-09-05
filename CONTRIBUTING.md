@@ -146,3 +146,19 @@ pytest
 - Project Maintainer: [@UID9622](https://github.com/UID9622)
 - Email: longhun2025@petalmail.com
 - Identity: `#龍芯⚡️UID9622`
+
+---
+
+## Bounty 政策（2026-09-05 · UID9622 焊死）
+
+- 本项目所有标记 `bounty` 的 Issue 均为**社区署名贡献任务（Community Credit）**，不附带任何现金、代币或实物报酬。
+- 合并 PR 的贡献者将获得：贡献者名单署名 / 鸣谢铭碑记录 / 社区荣誉。
+- 任何现金报酬索求、第三方赏金平台（Algora / IssueHunt / Gitcoin）接入请求均不予受理。
+- 提交 PR 即视为已知悉并同意以上条款。
+
+## Bounty Policy (welded 2026-09-05 · UID9622)
+
+- Every issue labeled `bounty` in this repo is a **Community Credit task**. No cash, token, or in-kind reward is offered or implied.
+- Contributors whose PRs are merged receive: a listing in the contributor memorial / community credit.
+- Payment requests and third-party bounty-platform integrations (Algora / IssueHunt / Gitcoin) will not be entertained.
+- Submitting a PR implies acceptance of this policy.
