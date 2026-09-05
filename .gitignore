@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.class
+target/
+dist/
+node_modules/
+.DS_Store
+Cargo.lock

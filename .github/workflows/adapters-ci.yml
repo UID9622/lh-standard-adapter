@@ -1,0 +1,115 @@
+name: Adapters CI Test Matrix
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run reference implementation tests
+        run: |
+          python tests/test_dna_generator.py
+          python tests/test_audit_wrapper.py
+          python tests/test_validator.py
+
+  test-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build JS
+        run: |
+          cd adapters/javascript
+          npm install --no-audit --no-fund
+          npx tsc
+      - name: Consistency with Python reference (pillar prefix must match)
+        run: |
+          cd adapters/javascript
+          REF=$(python3 -c "import sys;sys.path.insert(0,'${GITHUB_WORKSPACE}');from lh_standard_adapter.dna_generator import generate_dna;print(generate_dna('code','WRAP','V1.0').split('-')[0])")
+          OUT=$(node -e "const m=require('./dist/index.js');console.log(new m.LongHunAdapter().wrap({msg:'hello'},'code','P04').dna)")
+          case "$OUT" in "$REF"*) echo "OK prefix: $OUT";; *) echo "MISMATCH ref=$REF out=$OUT"; exit 1;; esac
+
+  test-go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+      - name: Test + Build Go
+        run: |
+          cd adapters/go
+          go vet ./...
+          go test -v ./...
+          go build ./...
+      - name: Consistency with Python reference (pillar prefix must match)
+        run: |
+          cd adapters/go
+          REF=$(python3 -c "import sys;sys.path.insert(0,'${GITHUB_WORKSPACE}');from lh_standard_adapter.dna_generator import generate_dna;print(generate_dna('code','WRAP','V1.0').split('-')[0])")
+          OUT=$(go test -v -run TestSampleDNA 2>&1 | grep '^#LongHun' | head -1)
+          case "$OUT" in "$REF"*) echo "OK prefix: $OUT";; *) echo "MISMATCH ref=$REF out=$OUT"; exit 1;; esac
+
+  test-rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions-rust-lang/setup-rust-toolchain@v1
+      - name: Test Rust
+        run: |
+          cd adapters/rust
+          cargo test
+      - name: Consistency with Python reference (pillar prefix must match)
+        run: |
+          cd adapters/rust
+          REF=$(python3 -c "import sys;sys.path.insert(0,'${GITHUB_WORKSPACE}');from lh_standard_adapter.dna_generator import generate_dna;print(generate_dna('code','WRAP','V1.0').split('-')[0])")
+          OUT=$(cargo test print_dna -- --nocapture 2>&1 | grep '^#LongHun' | head -1)
+          case "$OUT" in "$REF"*) echo "OK prefix: $OUT";; *) echo "MISMATCH ref=$REF out=$OUT"; exit 1;; esac
+
+  test-java:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Build + demo Java
+        run: |
+          cd adapters/java
+          javac -d target/classes src/main/java/com/longhun/adapter/LongHunAdapter.java
+          java -cp target/classes com.longhun.adapter.LongHunAdapter
+      - name: Consistency with Python reference (pillar prefix must match)
+        run: |
+          cd adapters/java
+          REF=$(python3 -c "import sys;sys.path.insert(0,'${GITHUB_WORKSPACE}');from lh_standard_adapter.dna_generator import generate_dna;print(generate_dna('code','WRAP','V1.0').split('-')[0])")
+          OUT=$(java -cp target/classes com.longhun.adapter.LongHunAdapter)
+          case "$OUT" in "$REF"*) echo "OK prefix: $OUT";; *) echo "MISMATCH ref=$REF out=$OUT"; exit 1;; esac
+
+  test-ruby:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+      - name: Syntax + self-test Ruby
+        run: |
+          cd adapters/ruby
+          ruby -c lib/lh_standard_adapter.rb
+          ruby -e "require './lib/lh_standard_adapter'; a=LongHun::Adapter.new; raise 'validate failed' unless a.validate(a.generate_dna)"
+      - name: Consistency with Python reference (pillar prefix must match)
+        run: |
+          cd adapters/ruby
+          REF=$(python3 -c "import sys;sys.path.insert(0,'${GITHUB_WORKSPACE}');from lh_standard_adapter.dna_generator import generate_dna;print(generate_dna('code','WRAP','V1.0').split('-')[0])")
+          OUT=$(ruby lib/lh_standard_adapter.rb)
+          case "$OUT" in "$REF"*) echo "OK prefix: $OUT";; *) echo "MISMATCH ref=$REF out=$OUT"; exit 1;; esac
