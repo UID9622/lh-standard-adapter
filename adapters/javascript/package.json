@@ -16,5 +16,9 @@
     "bounty"
   ],
   "author": "LongHun Core & rushikeshgarad2024-dev",
-  "license": "CC-BY-NC-SA-4.0"
+  "license": "CC-BY-NC-SA-4.0",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0"
+  }
 }

@@ -120,14 +120,14 @@ func (a *LongHunAdapter) GenerateDNA(taskType, action, version string) string {
 	}
 	now := time.Now().UTC().Add(8 * time.Hour) // Asia/Shanghai wall-clock time
 	yearStem, monthPillar, dayPillar, sc := computeStemBranch(now)
-	hex := selectHexagram(taskType)
+	hx := selectHexagram(taskType)
 
 	body := fmt.Sprintf("ADAPTER-%s-%s-%s", strings.ToUpper(taskType), strings.ToUpper(action), strings.ToUpper(version))
-	raw := fmt.Sprintf("%s%s%s%s%s%s%s%s%s", yearStem, monthPillar, dayPillar, sc, hex.Symbol, hex.EnName, body, a.Device, now.Format(time.RFC3339))
+	raw := fmt.Sprintf("%s%s%s%s%s%s%s%s%s", yearStem, monthPillar, dayPillar, sc, hx.Symbol, hx.EnName, body, a.Device, now.Format(time.RFC3339))
 	hash := sha256.Sum256([]byte(raw))
 	hash8 := hex.EncodeToString(hash[:])[:8]
 
-	return fmt.Sprintf("#LongHun⚡️%s·%s·%s·%s·%s%s-%s-%s", yearStem, monthPillar, dayPillar, sc, hex.Symbol, hex.EnName, body, hash8)
+	return fmt.Sprintf("#LongHun⚡️%s·%s·%s·%s·%s%s-%s-%s", yearStem, monthPillar, dayPillar, sc, hx.Symbol, hx.EnName, body, hash8)
 }
 
 func (a *LongHunAdapter) Wrap(payload interface{}, taskType, persona string) map[string]interface{} {
